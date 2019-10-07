@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/fengsri/springcloud-config.git
+          username: 1477452395@qq.com
+          password: 123456789fengwen
+
+  rabbitmq:
+    host: 47.100.21.42
+    port: 5672
+    username: guest
+    password: guest
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+server:
+  port: 8089
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
