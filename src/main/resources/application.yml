@@ -1,20 +1,21 @@
 spring:
   application:
-    name: config
+    name: config  #应用名称
   cloud:
     config:
       server:
         git:
+          #从远端github上拉取配置到本地仓库中
           uri: https://github.com/fengsri/springcloud-config.git
           username: 1477452395@qq.com
           password: 123456789fengwen
-
+  #配置rabbitmq的信息
   rabbitmq:
     host: 47.100.21.42
     port: 5672
     username: guest
     password: guest
-
+#把配置中心注册到注册中心上
 eureka:
   client:
     service-url:
@@ -23,6 +24,7 @@ eureka:
 server:
   port: 8089
 
+# 开放接口，好实现动态刷新
 management:
   endpoints:
     web:
